@@ -32,23 +32,30 @@ public class CarrinhoRun {
 	            System.out.println("2. " + produto2.getNome());
 	            System.out.println("3. " + produto3.getNome());
 	            int produtoEscolhido = scanner.nextInt();
-	            System.out.println("Quantos você gostaria de adicionar ao carrinho?");
-	            int quantidade = scanner.nextInt();
+	            int quantidade = 0;
 	            switch (produtoEscolhido) {
-	                case 1:
-	                    carrinho.adicionarProduto(produto1, quantidade);
-	                    break;
-	                case 2:
-	                    carrinho.adicionarProduto(produto2, quantidade);
-	                    break;
-	                case 3:
-	                    carrinho.adicionarProduto(produto3, quantidade);
-	                    break;
-	                default:
-	                    System.out.println("Opção inválida. Por favor, tente novamente.");
-	                    break;
-	            }
-	            break;
+                case 1:
+                	System.out.println("Quantos você gostaria de adicionar ao carrinho?");
+                    quantidade = scanner.nextInt();
+                    carrinho.adicionarProduto(produto1, quantidade);
+                    break;
+                case 2:
+                	System.out.println("Quantos você gostaria de adicionar ao carrinho?");
+                    quantidade = scanner.nextInt();
+                    carrinho.adicionarProduto(produto2, quantidade);
+                    break;
+                case 3:
+                	System.out.println("Quantos você gostaria de adicionar ao carrinho?");
+                    quantidade = scanner.nextInt();
+                    carrinho.adicionarProduto(produto3, quantidade);
+                    break;
+                default:
+                    System.out.println("Opção inválida. Por favor, tente novamente.");
+                    break;
+            }
+            break;
+	            
+	            
 	        case 2: 
 	        carrinho.checkout();
 	        break;
